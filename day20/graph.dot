@@ -1,0 +1,118 @@
+digraph {
+    node [shape = oval, style = filled, fillcolor = plum1]
+    edge [color = darkgreen, penwidth = 3]
+    peripheries = 0
+
+    subgraph cluster_grouping {
+    edge [color = black, penwidth = 1]
+
+    subgraph cluster_pp {
+    node [shape = box, style = filled, fillcolor = skyblue]
+
+    pp [shape = oval, style = filled, fillcolor = plum1]
+
+    ml -> { pp xt }
+    xt -> { bc }
+    bq -> { tb }
+    nb -> { qj }
+    pr -> { pp }
+    tb -> { pk pp }
+    bh -> { pp pr }
+    bc -> { nb pp }
+    hd -> { pp bq }
+    fq -> { pp bh }
+    pk -> { fq pp }
+    qj -> { pp hd }
+    pp -> { ml xt bq nb } [color = red, penwidth = 3, constraint = false]
+    }
+
+    subgraph cluster_rg {
+    node [shape = box, style = filled, fillcolor = skyblue]
+
+    rg [shape = oval, style = filled, fillcolor = plum1]
+
+    cs -> { zb rg }
+    zb -> { vz }
+    cp -> { kk }
+    vz -> { nd }
+    nf -> { sm rg }
+    jg -> { fl rg }
+    nd -> { rg jg }
+    kk -> { rg bj }
+    fl -> { nf rg }
+    lj -> { rg }
+    sm -> { rg cp }
+    bj -> { lj rg }
+    rg -> { cs zb cp vz } [color = red, penwidth = 3, constraint = false]
+    }
+
+    subgraph cluster_zp {
+    node [shape = box, style = filled, fillcolor = skyblue]
+
+    zp [shape = oval, style = filled, fillcolor = plum1]
+
+    vl -> { lv zp }
+    lk -> { hc }
+    rd -> { lk }
+    kb -> { pc }
+    pc -> { rz zp }
+    hc -> { kb zp }
+    mf -> { zp }
+    rz -> { zp fr }
+    lv -> { zp rd }
+    jd -> { zp mf }
+    fr -> { zp mr }
+    mr -> { zp jd }
+    zp -> { vl lk rd kb } [color = red, penwidth = 3, constraint = false]
+    }
+
+    subgraph cluster_sj {
+    node [shape = box, style = filled, fillcolor = skyblue]
+
+    sj [shape = oval, style = filled, fillcolor = plum1]
+
+    qq -> { sq }
+    cn -> { sn sj }
+    fd -> { nt }
+    sn -> { fd }
+    rq -> { ch sj }
+    nt -> { kq sj }
+    sq -> { kl sj }
+    kl -> { mb sj }
+    nh -> { sj rq }
+    kq -> { sj qq }
+    mb -> { sj nh }
+    ch -> { sj }
+    sj -> { qq cn fd sn } [color = red, penwidth = 3, constraint = false]
+    }
+    }
+
+    subgraph cluster_roadcaster {
+    node [shape = box, style = rounded]
+
+    roadcaster;
+    }
+
+    subgraph cluster_rx {
+    node [shape = oval, style = filled, fillcolor = plum1]
+    edge [color = black, penwidth = 1]
+
+    rx [shape = box, style = rounded]
+    ln -> { df }
+    df -> { rx }
+    gp -> { df }
+    xl -> { df }
+    xp -> { df }
+    }
+
+    pp -> { ln }
+    ln -> {  }
+    df -> {  }
+    rg -> { gp }
+    zp -> { xl }
+    roadcaster -> { vl cs cn ml }
+    sj -> { xp }
+    gp -> {  }
+    xl -> {  }
+    xp -> {  }
+}
